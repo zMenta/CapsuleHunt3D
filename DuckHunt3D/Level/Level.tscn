@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Player/Gun.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Level/Level.gd" type="Script" id=2]
 [ext_resource path="res://Assets/Targets.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Ducks/Duck.tscn" type="PackedScene" id=4]
 
 [sub_resource type="SpatialMaterial" id=1]
 albedo_color = Color( 0.211765, 0.4, 0.184314, 1 )
@@ -27,21 +28,21 @@ script = ExtResource( 2 )
 [node name="Blocks" type="Spatial" parent="."]
 
 [node name="CSGBox" type="CSGBox" parent="Blocks"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -13.3369, -17.3095 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.67218, -17.3095 )
 use_collision = true
 width = 176.136
 depth = 53.998
 material = SubResource( 1 )
 
 [node name="CSGBox2" type="CSGBox" parent="Blocks"]
-transform = Transform( 1, 0, 0, 0, 0.995862, -0.0908759, 0, 0.0908759, 0.995862, 0, -13.6573, -36.8126 )
+transform = Transform( 1, 0, 0, 0, 0.995862, -0.0908759, 0, 0.0908759, 0.995862, 0, -3.99258, -36.8126 )
 use_collision = true
 width = 284.807
 depth = 53.998
 material = SubResource( 1 )
 
 [node name="CSGBox3" type="CSGBox" parent="Blocks"]
-transform = Transform( 1, 0, 0, 0, 0.0148522, -0.99989, 0, 0.99989, 0.0148522, -3.10603, 32.7047, -46.4874 )
+transform = Transform( 1, 0, 0, 0, 0.0148522, -0.99989, 0, 0.99989, 0.0148522, -3.10603, 42.3694, -46.4874 )
 use_collision = true
 width = 294.601
 height = 0.002
@@ -76,3 +77,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -26.4639, 21.4018, -24.0056 )
 
 [node name="Targets4" parent="." instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.00786, -0.528685, -24.0056 )
+
+[node name="Duck" parent="." instance=ExtResource( 4 )]
+transform = Transform( 0.00968639, 0, 0.999953, 0, 1, 0, -0.999953, 0, 0.00968639, 3.40282, 0.368236, -11.9913 )

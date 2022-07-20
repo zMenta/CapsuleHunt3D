@@ -12,5 +12,7 @@ func fire() -> void:
 	var collider : Object = ray.get_collider()
 	
 	if collider:
-		if collider.is_in_group("target"):
+		if collider.has_method("die"):
+			collider.die()
+		elif collider.is_in_group("target"):
 			collider.queue_free()

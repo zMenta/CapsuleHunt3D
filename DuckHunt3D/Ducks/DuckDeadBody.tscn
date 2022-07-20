@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=2]
+
+[sub_resource type="CapsuleShape" id=1]
+radius = 0.353165
+height = 0.643814
+
+[sub_resource type="CapsuleMesh" id=2]
+
+[sub_resource type="SpatialMaterial" id=3]
+albedo_color = Color( 0.607843, 0.517647, 0.298039, 1 )
+
+[node name="DuckBody" type="RigidBody"]
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+shape = SubResource( 1 )
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+transform = Transform( 0.344801, 0, 0, 0, 0.328903, 0, 0, 0, 0.443503, 0, 0, 0 )
+mesh = SubResource( 2 )
+material/0 = SubResource( 3 )
