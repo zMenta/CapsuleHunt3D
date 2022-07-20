@@ -5,6 +5,9 @@ export(PackedScene) var dead_body
 export var move_speed := 8
 export var direction := Vector3(1,1,0)
 
+func _ready() -> void:
+	direction = Vector3(rand_range(-1,1),1,rand_range(-0.5,0))
+
 
 func _physics_process(delta: float) -> void:
 	move_and_slide(move_speed * direction.normalized())
