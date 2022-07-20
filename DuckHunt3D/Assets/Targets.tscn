@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=2]
+
+[sub_resource type="CylinderMesh" id=1]
+
+[sub_resource type="SpatialMaterial" id=2]
+albedo_color = Color( 0.933333, 0.235294, 0.45098, 1 )
+
+[node name="Targets" type="Spatial"]
+
+[node name="CSGMesh" type="CSGMesh" parent="."]
+transform = Transform( 2.2728e-16, -5.19957e-09, -1, -0.976583, -4.26878e-08, 0, -5.19957e-09, 0.118952, -4.37114e-08, 0, 0, 0 )
+use_collision = true
+mesh = SubResource( 1 )
+material = SubResource( 2 )

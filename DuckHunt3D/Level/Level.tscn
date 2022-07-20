@@ -1,0 +1,79 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Player/Gun.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Level/Level.gd" type="Script" id=2]
+[ext_resource path="res://Assets/Targets.tscn" type="PackedScene" id=3]
+
+[sub_resource type="SpatialMaterial" id=1]
+albedo_color = Color( 0.211765, 0.4, 0.184314, 1 )
+
+[sub_resource type="SpatialMaterial" id=4]
+albedo_color = Color( 0.486275, 0.647059, 0.898039, 1 )
+
+[sub_resource type="ProceduralSky" id=3]
+
+[sub_resource type="Environment" id=2]
+background_mode = 3
+background_sky = SubResource( 3 )
+background_color = Color( 0.486275, 0.647059, 0.898039, 1 )
+ambient_light_color = Color( 0.0862745, 0.105882, 0.105882, 1 )
+fog_color = Color( 0.619608, 0.619608, 0.423529, 1 )
+fog_sun_color = Color( 0.898039, 0.756863, 0.32549, 1 )
+fog_depth_end = 200.0
+
+[node name="Level" type="Spatial"]
+script = ExtResource( 2 )
+
+[node name="Blocks" type="Spatial" parent="."]
+
+[node name="CSGBox" type="CSGBox" parent="Blocks"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -13.3369, -17.3095 )
+use_collision = true
+width = 176.136
+depth = 53.998
+material = SubResource( 1 )
+
+[node name="CSGBox2" type="CSGBox" parent="Blocks"]
+transform = Transform( 1, 0, 0, 0, 0.995862, -0.0908759, 0, 0.0908759, 0.995862, 0, -13.6573, -68.5161 )
+use_collision = true
+width = 284.807
+depth = 53.998
+material = SubResource( 1 )
+
+[node name="CSGBox3" type="CSGBox" parent="Blocks"]
+transform = Transform( 1, 0, 0, 0, 0.0148522, -0.99989, 0, 0.99989, 0.0148522, -3.10603, 32.7047, -78.1909 )
+use_collision = true
+width = 294.601
+height = 0.002
+depth = 94.7501
+material = SubResource( 4 )
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( 2 )
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.92419, 9.42473 )
+current = true
+
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.894412, 0.447244, 0, -0.447244, 0.894412, 0, 18.3269, 7.38587 )
+light_color = Color( 0.909804, 0.886275, 0.290196, 1 )
+shadow_enabled = true
+
+[node name="GunPivot" type="Position3D" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.927162, 7.8818 )
+
+[node name="Gun" parent="GunPivot" instance=ExtResource( 1 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, -1.06767 )
+
+[node name="Targets" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 16.9904, -55.7091 )
+
+[node name="Targets2" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 26.8156, 3.80938, -55.7091 )
+
+[node name="Targets3" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -42.3031, 21.4018, -55.7091 )
+
+[node name="Targets4" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.00786, -0.528685, -55.7091 )
