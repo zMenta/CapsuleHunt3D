@@ -1,5 +1,7 @@
 extends Spatial
 
+signal duck_spawned(duck)
+
 onready var gun_pivot := $GunPivot
 onready var gun := $GunPivot/Gun
 onready var camera := $Camera
@@ -23,3 +25,6 @@ func _input(event: InputEvent) -> void:
 			gun_pivot.look_at(_position, Vector3.UP)
 		
 		
+
+func _on_DuckSpawner_duck_spawned(duck) -> void:
+	emit_signal("duck_spawned", duck)

@@ -1,5 +1,7 @@
 extends Spatial
 
+signal duck_spawned(duck)
+
 export(PackedScene) var Duck
 
 onready var path_follow := $DuckPath/PathFollow
@@ -12,6 +14,7 @@ func _on_SpawnTime_timeout() -> void:
 	duck_instance.global_transform = path_follow.global_transform
 	duck_instance.rotation_degrees += Vector3(0,90,0)
 	
+	emit_signal("duck_spawned", duck_instance)
 	get_tree().current_scene.add_child(duck_instance)
 	
 	
