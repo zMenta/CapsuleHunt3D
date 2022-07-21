@@ -81,7 +81,7 @@ __meta__ = {
 Duck = ExtResource( 4 )
 
 [node name="SpawnTime" type="Timer" parent="DuckSpawner"]
-wait_time = 2.0
+wait_time = 1.2
 autostart = true
 
 [node name="DuckPath" type="Path" parent="DuckSpawner"]
@@ -89,6 +89,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.08392, -27.4842 )
 curve = SubResource( 5 )
 
 [node name="PathFollow" type="PathFollow" parent="DuckSpawner/DuckPath"]
-transform = Transform( 0.999809, -0.00714024, -0.018177, 0.00714366, 0.999975, 0.000122899, 0.0181756, -0.000252726, 0.999834, -26.8587, 1.27319, 1.28637 )
+transform = Transform( 0.999809, -0.00714024, -0.018177, 0.00714366, 0.999975, 0.000122899, 0.0181756, -0.000252726, 0.999834, -12, 1.08392, -1.79276 )
 
 [connection signal="timeout" from="DuckSpawner/SpawnTime" to="DuckSpawner" method="_on_SpawnTime_timeout"]

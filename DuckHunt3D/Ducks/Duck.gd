@@ -27,3 +27,7 @@ func die() -> void:
 	get_parent().add_child(body)
 	queue_free()
 	
+
+
+func _on_VisibilityNotifier_screen_exited() -> void:
+	queue_free()
