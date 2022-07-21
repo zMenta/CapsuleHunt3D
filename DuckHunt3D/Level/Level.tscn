@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Player/Gun.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Level/Level.gd" type="Script" id=2]
+[ext_resource path="res://Level/DuckSpawner.gd" type="Script" id=3]
 [ext_resource path="res://Ducks/Duck.tscn" type="PackedScene" id=4]
 
 [sub_resource type="SpatialMaterial" id=1]
@@ -21,6 +22,12 @@ fog_color = Color( 0.619608, 0.619608, 0.423529, 1 )
 fog_sun_color = Color( 0.898039, 0.756863, 0.32549, 1 )
 fog_depth_end = 200.0
 
+[sub_resource type="Curve3D" id=5]
+_data = {
+"points": PoolVector3Array( 0, 0, 0, 0, 0, 0, -12, 1.08392, -1.79276, 0, 0, 0, 0, 0, 0, 20, 1.08392, -0.792755, 0, 0, 0, 0, 0, 0, 19, 1.08392, -10.7928, 0, 0, 0, 0, 0, 0, -13, 1.08392, -10.7928, 0, 0, 0, 0, 0, 0, -12, 1.08392, -1.79276 ),
+"tilts": PoolRealArray( 0, 0, 0, 0, 0 )
+}
+
 [node name="Level" type="Spatial"]
 script = ExtResource( 2 )
 
@@ -34,14 +41,14 @@ depth = 53.998
 material = SubResource( 1 )
 
 [node name="CSGBox2" type="CSGBox" parent="Blocks"]
-transform = Transform( 1, 0, 0, 0, 0.995862, -0.0908759, 0, 0.0908759, 0.995862, 0, -3.99258, -36.8126 )
+transform = Transform( 1, 0, 0, 0, 0.995862, -0.0908759, 0, 0.0908759, 0.995862, 0, -3.99258, -19.5357 )
 use_collision = true
 width = 284.807
 depth = 53.998
 material = SubResource( 1 )
 
 [node name="CSGBox3" type="CSGBox" parent="Blocks"]
-transform = Transform( 1, 0, 0, 0, 0.0148522, -0.99989, 0, 0.99989, 0.0148522, -3.10603, 42.3694, -46.4874 )
+transform = Transform( 1, 0, 0, 0, 0.0148522, -0.99989, 0, 0.99989, 0.0148522, -3.10603, 42.3694, -29.2105 )
 use_collision = true
 width = 294.601
 height = 0.002
@@ -65,38 +72,23 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.927162, 7.8818 )
 [node name="Gun" parent="GunPivot" instance=ExtResource( 1 )]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, -1.06767 )
 
-[node name="Duck" parent="." instance=ExtResource( 4 )]
-transform = Transform( 0.00968639, 0, 0.999953, 0, 1, 0, -0.999953, 0, 0.00968639, 3.40282, 0.368236, -11.9913 )
+[node name="DuckSpawner" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 17.2769 )
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+Duck = ExtResource( 4 )
 
-[node name="Duck2" parent="." instance=ExtResource( 4 )]
-transform = Transform( 0.00968639, 0, 0.999953, 0, 1, 0, -0.999953, 0, 0.00968639, 3.40282, 0.368236, -11.9913 )
+[node name="SpawnTime" type="Timer" parent="DuckSpawner"]
+wait_time = 2.0
+autostart = true
 
-[node name="Duck3" parent="." instance=ExtResource( 4 )]
-transform = Transform( 0.00968639, 0, 0.999953, 0, 1, 0, -0.999953, 0, 0.00968639, 3.40282, 0.368236, -11.9913 )
+[node name="DuckPath" type="Path" parent="DuckSpawner"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.08392, -27.4842 )
+curve = SubResource( 5 )
 
-[node name="Duck4" parent="." instance=ExtResource( 4 )]
-transform = Transform( 0.00968639, 0, 0.999953, 0, 1, 0, -0.999953, 0, 0.00968639, 3.40282, 0.368236, -11.9913 )
+[node name="PathFollow" type="PathFollow" parent="DuckSpawner/DuckPath"]
+transform = Transform( 0.999809, -0.00714024, -0.018177, 0.00714366, 0.999975, 0.000122899, 0.0181756, -0.000252726, 0.999834, -26.8587, 1.27319, 1.28637 )
 
-[node name="Duck5" parent="." instance=ExtResource( 4 )]
-transform = Transform( 0.00968639, 0, 0.999953, 0, 1, 0, -0.999953, 0, 0.00968639, 3.40282, 0.368236, -11.9913 )
-
-[node name="Duck6" parent="." instance=ExtResource( 4 )]
-transform = Transform( 0.00968639, 0, 0.999953, 0, 1, 0, -0.999953, 0, 0.00968639, 3.40282, 0.368236, -11.9913 )
-
-[node name="Duck7" parent="." instance=ExtResource( 4 )]
-transform = Transform( 0.00968639, 0, 0.999953, 0, 1, 0, -0.999953, 0, 0.00968639, 3.40282, 0.368236, -11.9913 )
-
-[node name="Duck8" parent="." instance=ExtResource( 4 )]
-transform = Transform( 0.00968639, 0, 0.999953, 0, 1, 0, -0.999953, 0, 0.00968639, 3.40282, 0.368236, -11.9913 )
-
-[node name="Duck9" parent="." instance=ExtResource( 4 )]
-transform = Transform( 0.00968639, 0, 0.999953, 0, 1, 0, -0.999953, 0, 0.00968639, 3.40282, 0.368236, -11.9913 )
-
-[node name="Duck10" parent="." instance=ExtResource( 4 )]
-transform = Transform( 0.00968639, 0, 0.999953, 0, 1, 0, -0.999953, 0, 0.00968639, 3.40282, 0.368236, -11.9913 )
-
-[node name="Duck11" parent="." instance=ExtResource( 4 )]
-transform = Transform( 0.00968639, 0, 0.999953, 0, 1, 0, -0.999953, 0, 0.00968639, 3.40282, 0.368236, -11.9913 )
-
-[node name="Duck12" parent="." instance=ExtResource( 4 )]
-transform = Transform( 0.00968639, 0, 0.999953, 0, 1, 0, -0.999953, 0, 0.00968639, 3.40282, 0.368236, -11.9913 )
+[connection signal="timeout" from="DuckSpawner/SpawnTime" to="DuckSpawner" method="_on_SpawnTime_timeout"]

@@ -1,5 +1,9 @@
 extends KinematicBody
 
+
+signal duck_died
+
+
 export(PackedScene) var dead_body
 
 export var move_speed := 8
@@ -19,6 +23,7 @@ func die() -> void:
 	body.apply_central_impulse(direction * 5)
 	body.apply_torque_impulse(Vector3(rand_range(0,3),rand_range(0,3),rand_range(0,3)))
 	
+	emit_signal("duck_died")
 	get_parent().add_child(body)
 	queue_free()
 	
