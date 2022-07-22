@@ -13,5 +13,6 @@ func _on_Level_duck_spawned(duck: KinematicBody) -> void:
 	
 	
 func _on_Duck_died() -> void:
+	$GUI.point_made_animation()
 	current_score += 100
 	$GUI.change_score(current_score)
