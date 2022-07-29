@@ -6,6 +6,9 @@ onready var ray := $RayCast
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("fire"):
 		fire()
+	
+	if event.is_action_pressed("reload"):
+		$AnimationPlayer.play("Reload")
 
 
 func fire() -> void:

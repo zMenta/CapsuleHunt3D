@@ -3,7 +3,6 @@ extends Spatial
 signal duck_spawned(duck)
 
 onready var gun_pivot := $GunPivot
-onready var gun := $GunPivot/Gun
 onready var camera := $Camera
 
 var _ray_start_position := Vector3()
