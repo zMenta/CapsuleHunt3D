@@ -19,3 +19,7 @@ func fire() -> void:
 			collider.die()
 		elif collider.is_in_group("target"):
 			collider.queue_free()
+			
+func eject_shells() -> void:
+	$ShellParticles.emitting = true
+	

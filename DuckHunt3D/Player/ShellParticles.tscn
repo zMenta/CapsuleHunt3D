@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Player/BuckShot.mesh" type="ArrayMesh" id=1]
+
+[sub_resource type="ParticlesMaterial" id=1]
+direction = Vector3( 0, 1, 0 )
+initial_velocity = 1.2
+initial_velocity_random = 0.2
+
+[node name="ShellParticle" type="Particles"]
+emitting = false
+amount = 2
+lifetime = 0.5
+one_shot = true
+explosiveness = 1.0
+visibility_aabb = AABB( -0.120477, -0.154893, -0.196434, 0.295642, 0.277559, 0.392868 )
+process_material = SubResource( 1 )
+draw_pass_1 = ExtResource( 1 )
