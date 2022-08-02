@@ -11,6 +11,7 @@ func _input(event: InputEvent) -> void:
 		if ammo > 0:
 			print("fired")
 			fire()
+			$AnimationPlayer.play("fire")
 			ammo -= 1
 		else:
 			reload()
