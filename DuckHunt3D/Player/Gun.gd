@@ -9,7 +9,6 @@ var busy = false
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("fire"):
 		if ammo > 0:
-			print("fired")
 			fire()
 			$AnimationPlayer.play("fire")
 			ammo -= 1
