@@ -1,9 +1,8 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Level/Level.gd" type="Script" id=2]
 [ext_resource path="res://Level/DuckSpawner.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Player/DoubleBarrelShotgun.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Player/Gun.gd" type="Script" id=5]
 
 [sub_resource type="SpatialMaterial" id=1]
 albedo_color = Color( 0.211765, 0.4, 0.184314, 1 )
@@ -92,8 +91,7 @@ light_color = Color( 0.909804, 0.886275, 0.290196, 1 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.927162, 7.5818 )
 
 [node name="DoubleBarrelShotgun" parent="GunPivot" instance=ExtResource( 4 )]
-transform = Transform( -1.74846e-07, 0, 4, 0, 4, 0, -4, 0, -1.74846e-07, 0.2, 0.1, 0.6 )
-script = ExtResource( 5 )
+transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 0.2, 0.1, 0.6 )
 
 [node name="DuckSpawner" parent="." instance=ExtResource( 3 )]
 
