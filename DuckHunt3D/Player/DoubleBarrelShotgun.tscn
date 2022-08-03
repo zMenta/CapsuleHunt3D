@@ -187,15 +187,18 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.123714, 0.0378626, -0.025266
 
 [node name="BuckShot" parent="Barrel" index="0" instance=ExtResource( 2 )]
 transform = Transform( 0.999972, 0.00738746, -0.000667564, -0.00738633, 0.999971, 0.00162127, 0.000679534, -0.00161629, 0.999998, -0.153286, -0.0374284, 0.0251235 )
+visible = false
 
 [node name="BuckShot2" parent="Barrel" index="1" instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.149526, -0.03824, 0.0512637 )
+visible = false
 
 [node name="Muzzle" type="Position3D" parent="." index="3"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.579743, 0.0841097, -0.0345379 )
 
 [node name="MuzzleFlash" type="Spatial" parent="Muzzle" index="0"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0244599, 0 )
+visible = false
 
 [node name="Sprite3D" type="Sprite3D" parent="Muzzle/MuzzleFlash" index="0"]
 transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0.0938918, 0, 0 )
