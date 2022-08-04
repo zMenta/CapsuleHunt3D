@@ -13,8 +13,9 @@ func _input(event: InputEvent) -> void:
 			fire()
 			$AnimationPlayer.play("fire")
 			ammo -= 1
-		else:
-			reload()
+			
+			if ammo <= 0:
+				reload()
 		
 	
 	if event.is_action_pressed("reload"):

@@ -88,7 +88,7 @@ transform = Transform( 1, 0, 0, 0, 0.894412, 0.447244, 0, -0.447244, 0.894412, 0
 light_color = Color( 0.909804, 0.886275, 0.290196, 1 )
 
 [node name="GunPivot" type="Position3D" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.927162, 7.5818 )
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0.927162, 7.5818 )
 
 [node name="DoubleBarrelShotgun" parent="GunPivot" instance=ExtResource( 4 )]
 transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0 )
