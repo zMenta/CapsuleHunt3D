@@ -9,13 +9,10 @@ var busy = false
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("fire") and not busy:
 		if ammo > 0:
-			print("fired")
 			fire()
 			$AnimationPlayer.play("fire")
 			ammo -= 1
-			
-			if ammo <= 0:
-				reload()
+
 		
 	
 	if event.is_action_pressed("reload"):
@@ -41,3 +38,5 @@ func reload() -> void:
 func _on_AnimationPlayer_animation_finished(anim_name: String) -> void:
 	if anim_name == "Reload":
 		busy = false
+	elif anim_name == "fire" and ammo <= 0:
+		reload()

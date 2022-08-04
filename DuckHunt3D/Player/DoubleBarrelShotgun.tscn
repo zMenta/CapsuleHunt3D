@@ -213,7 +213,6 @@ tracks/2/keys = {
 }
 
 [node name="DoubleBarrelShotgun" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 script = ExtResource( 3 )
 
 [node name="OpenPin" parent="." index="1"]
