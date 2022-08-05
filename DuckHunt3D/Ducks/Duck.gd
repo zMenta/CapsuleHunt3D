@@ -13,7 +13,7 @@ func _ready() -> void:
 	direction = Vector3(rand_range(-1,1),1,rand_range(-0.5,0))
 
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	move_and_slide(move_speed * direction.normalized())
 
 
