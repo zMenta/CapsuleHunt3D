@@ -110,3 +110,17 @@ margin_top = 111.0
 margin_right = 559.0
 margin_bottom = 125.0
 text = "Time's Up! Good try."
+
+[node name="TimeLabel" type="Label" parent="."]
+margin_left = 94.0
+margin_top = 510.0
+margin_right = 134.0
+margin_bottom = 524.0
+text = "00"
+
+[node name="TimeTextLabel" type="Label" parent="."]
+margin_left = 21.0
+margin_top = 510.0
+margin_right = 85.0
+margin_bottom = 524.0
+text = "Time Left:"

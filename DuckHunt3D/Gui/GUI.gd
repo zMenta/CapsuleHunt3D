@@ -17,3 +17,8 @@ func point_made_animation() -> void:
 func switch_visibility_time_up_label() -> void:
 	$TimesUpLabel.visible = not $TimesUpLabel.visible 
 	
+
+func change_time_label(new_value: float) -> void:
+	$TimeLabel.text = str(new_value)
+	
+
