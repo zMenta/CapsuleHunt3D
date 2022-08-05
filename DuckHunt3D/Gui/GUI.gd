@@ -13,3 +13,7 @@ func _input(event: InputEvent) -> void:
 func point_made_animation() -> void:
 	$AnimationPlayer.play("PointMadeAnimation")
 	
+
+func switch_visibility_time_up_label() -> void:
+	$TimesUpLabel.visible = not $TimesUpLabel.visible 
+	

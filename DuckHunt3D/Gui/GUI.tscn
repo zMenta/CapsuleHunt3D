@@ -98,8 +98,15 @@ custom_colors/font_color = Color( 1, 0.937255, 0.027451, 1 )
 custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
 text = "+100"
 align = 2
-percent_visible = -0.25
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/PointMadeAnimation = SubResource( 1 )
 anims/RESET = SubResource( 2 )
+
+[node name="TimesUpLabel" type="Label" parent="."]
+visible = false
+margin_left = 418.0
+margin_top = 111.0
+margin_right = 559.0
+margin_bottom = 125.0
+text = "Time's Up! Good try."

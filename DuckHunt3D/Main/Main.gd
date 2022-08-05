@@ -13,6 +13,14 @@ func _on_Level_duck_spawned(duck: KinematicBody) -> void:
 	
 	
 func _on_Duck_died() -> void:
-	$GUI.point_made_animation()
-	current_score += 100
-	$GUI.change_score(current_score)
+	if not $GameTimer.is_stopped():
+		print("Valid")
+		$GUI.point_made_animation()
+		current_score += 100
+		$GUI.change_score(current_score)
+	else:
+		print("kill not valid!")
+
+
+func _on_GameTimer_timeout():
+	$GUI.switch_visibility_time_up_label()
