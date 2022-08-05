@@ -10,7 +10,8 @@ height = 0.643814
 [sub_resource type="CapsuleMesh" id=2]
 
 [sub_resource type="SpatialMaterial" id=3]
-albedo_color = Color( 0.607843, 0.517647, 0.298039, 1 )
+resource_local_to_scene = true
+albedo_color = Color( 0.831373, 0.721569, 0.129412, 1 )
 
 [node name="Duck" type="KinematicBody" groups=["target"]]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0 )
