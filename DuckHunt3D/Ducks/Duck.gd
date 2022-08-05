@@ -1,7 +1,7 @@
 extends KinematicBody
 
 
-signal duck_died
+signal duck_died(duck_body)
 
 
 export(PackedScene) var dead_body
@@ -23,11 +23,10 @@ func die() -> void:
 	body.apply_central_impulse(direction * 5)
 	body.apply_torque_impulse(Vector3(rand_range(0,3),rand_range(0,3),rand_range(0,3)))
 	
-	emit_signal("duck_died")
+	emit_signal("duck_died", self)
 	get_parent().add_child(body)
 	queue_free()
 	
-
 
 func _on_VisibilityNotifier_screen_exited() -> void:
 	queue_free()

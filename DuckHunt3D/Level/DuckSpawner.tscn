@@ -18,6 +18,7 @@ __meta__ = {
 }
 Duck = ExtResource( 1 )
 TimeDuck = ExtResource( 3 )
+duck_counter_threshold = 1
 
 [node name="SpawnTime" type="Timer" parent="."]
 wait_time = 1.2
