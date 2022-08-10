@@ -17,7 +17,7 @@ func _input(event: InputEvent) -> void:
 
 		_ray_target_position = (
 			_ray_start_position
-			+ camera.project_ray_normal(_mouse_position) * 200
+			+ camera.project_ray_normal(_mouse_position) * 100
 		)
 
 		var _space_state := get_world().direct_space_state
@@ -26,6 +26,8 @@ func _input(event: InputEvent) -> void:
 		if not _intersection.empty():
 			var _position = _intersection.position
 			gun_pivot.look_at(_position, Vector3.UP)
+		else:
+			gun_pivot.look_at(_ray_target_position, Vector3.UP)
 
 
 func _on_DuckSpawner_duck_spawned(duck) -> void:
