@@ -2,7 +2,7 @@ extends Control
 
 
 func change_score(new_score: int) -> void:
-	$CenterContainer/ScoreLabel.text = "Score: %s" % new_score
+	$"%ScoreLabel".text = "Score: %s" % new_score
 
 
 func _input(event: InputEvent) -> void:
@@ -24,4 +24,4 @@ func switch_visibility_time_up_label() -> void:
 
 
 func change_time_label(new_value: float) -> void:
-	$TimeLabel.text = str(new_value)
+	$"%TimeLabel".text = str(new_value)
