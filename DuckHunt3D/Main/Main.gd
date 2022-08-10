@@ -1,20 +1,20 @@
 extends Node
 
-
 var current_score := 0
 
 
 func _ready() -> void:
 	randomize()
-	
+
+
 func _process(_delta) -> void:
 	$GUI.change_time_label($GameTimer.time_left)
 
 
 func _on_Level_duck_spawned(duck: KinematicBody) -> void:
 	duck.connect("duck_died", self, "_on_Duck_died")
-	
-	
+
+
 func _on_Duck_died(duck_body: KinematicBody) -> void:
 	if not $GameTimer.is_stopped():
 		$GUI.point_made_animation()
