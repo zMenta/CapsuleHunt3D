@@ -22,6 +22,7 @@ func _on_Duck_died(duck_body: KinematicBody) -> void:
 		$GUI.change_score(current_score)
 		if duck_body.is_in_group("time_duck"):
 			$GameTimer.start($GameTimer.time_left + 4.0)
+			$GUI.time_made_animation()
 
 
 func _on_GameTimer_timeout():
