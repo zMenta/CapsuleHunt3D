@@ -22,7 +22,6 @@ duck_counter_threshold = 1
 
 [node name="SpawnTime" type="Timer" parent="."]
 wait_time = 1.2
-autostart = true
 
 [node name="DuckPath" type="Path" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.08392, -27.4842 )
