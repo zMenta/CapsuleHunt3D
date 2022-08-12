@@ -9,6 +9,10 @@ var _ray_start_position := Vector3()
 var _ray_target_position := Vector3()
 
 
+func game_start() -> void:
+	$DuckSpawner.start_spawner()
+
+
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion:
 		var _mouse_position: Vector2 = get_viewport().get_mouse_position()

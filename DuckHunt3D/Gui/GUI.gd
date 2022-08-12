@@ -1,5 +1,7 @@
 extends Control
 
+signal game_start
+
 
 func change_score(new_score: int) -> void:
 	$"%ScoreLabel".text = "Score: %s" % new_score
@@ -25,3 +27,8 @@ func switch_visibility_time_up_label() -> void:
 
 func change_time_label(new_value: float) -> void:
 	$"%TimeLabel".text = str(new_value)
+
+
+func _on_Start_pressed():
+	emit_signal("game_start")
+	$Menus.visible = false

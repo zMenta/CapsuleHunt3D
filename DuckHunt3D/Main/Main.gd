@@ -5,6 +5,7 @@ var current_score := 0
 
 func _ready() -> void:
 	randomize()
+	$GUI.connect("game_start", self, "_on_Game_Start")
 
 
 func _process(_delta) -> void:
@@ -25,5 +26,9 @@ func _on_Duck_died(duck_body: KinematicBody) -> void:
 			$GUI.time_made_animation()
 
 
-func _on_GameTimer_timeout():
+func _on_GameTimer_timeout() -> void:
 	$GUI.switch_visibility_time_up_label()
+
+
+func _on_Game_Start() -> void:
+	$Level.game_start()

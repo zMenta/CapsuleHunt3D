@@ -11,10 +11,6 @@ var _duck_counter := 0
 onready var path_follow := $DuckPath/PathFollow
 
 
-func _ready() -> void:
-	start_spawner()
-
-
 func start_spawner() -> void:
 	$SpawnTime.start()
 
