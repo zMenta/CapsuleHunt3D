@@ -7,7 +7,7 @@ func _ready() -> void:
 	randomize()
 	$GUI.connect("game_start", self, "_on_Game_Start")
 
-
+	
 func _process(_delta) -> void:
 	$GUI.change_time_label($GameTimer.time_left)
 

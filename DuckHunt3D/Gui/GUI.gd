@@ -1,6 +1,7 @@
 extends Control
 
 signal game_start
+signal game_restart
 
 
 func change_score(new_score: int) -> void:
@@ -32,3 +33,12 @@ func change_time_label(new_value: float) -> void:
 func _on_Start_pressed():
 	emit_signal("game_start")
 	$Menus.visible = false
+
+
+func _on_Restart_pressed():
+	print("game restarted")
+	emit_signal("game_restart")
+
+
+func _on_Quit_pressed():
+	OS.quit()
