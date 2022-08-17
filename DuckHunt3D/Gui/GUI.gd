@@ -30,14 +30,15 @@ func change_time_label(new_value: float) -> void:
 	$"%TimeLabel".text = str(new_value)
 
 
+func show_menu():
+	$Menus.visible = true
+
+
 func _on_Start_pressed():
 	emit_signal("game_start")
 	$Menus.visible = false
-
-
-func _on_Restart_pressed():
-	print("game restarted")
-	emit_signal("game_restart")
+	$TimesUpLabel.visible = false
+	$"%Start".text = "Play Again"
 
 
 func _on_Quit_pressed():

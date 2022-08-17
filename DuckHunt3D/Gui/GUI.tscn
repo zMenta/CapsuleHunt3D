@@ -261,22 +261,16 @@ margin_right = 274.0
 margin_bottom = 501.0
 
 [node name="Start" type="Button" parent="Menus/VBoxContainer"]
+unique_name_in_owner = true
 margin_right = 234.0
 margin_bottom = 20.0
 text = "Start"
 
-[node name="Restart" type="Button" parent="Menus/VBoxContainer"]
+[node name="Quit" type="Button" parent="Menus/VBoxContainer"]
 margin_top = 24.0
 margin_right = 234.0
 margin_bottom = 44.0
-text = "Restart"
-
-[node name="Quit" type="Button" parent="Menus/VBoxContainer"]
-margin_top = 48.0
-margin_right = 234.0
-margin_bottom = 68.0
 text = "Quit"
 
 [connection signal="pressed" from="Menus/VBoxContainer/Start" to="." method="_on_Start_pressed"]
-[connection signal="pressed" from="Menus/VBoxContainer/Restart" to="." method="_on_Restart_pressed"]
 [connection signal="pressed" from="Menus/VBoxContainer/Quit" to="." method="_on_Quit_pressed"]
