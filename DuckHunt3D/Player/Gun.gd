@@ -1,5 +1,7 @@
 extends Spatial
 
+export var infinite_ammo := false
+
 onready var ray := $RayCast
 
 var ammo = 2
@@ -11,7 +13,8 @@ func _input(event: InputEvent) -> void:
 		if ammo > 0:
 			fire()
 			$AnimationPlayer.play("fire")
-			ammo -= 1
+			if not infinite_ammo:
+				ammo -= 1
 
 	if event.is_action_pressed("reload"):
 		reload()

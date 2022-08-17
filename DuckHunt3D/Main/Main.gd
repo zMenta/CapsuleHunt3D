@@ -30,6 +30,7 @@ func _on_GameTimer_timeout() -> void:
 	$GUI.switch_visibility_time_up_label()
 	$GUI.show_menu()
 	$GUI.change_score(0)
+	$Level.game_over()
 
 
 func _on_Game_Start() -> void:

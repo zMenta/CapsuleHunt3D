@@ -4,13 +4,24 @@ signal duck_spawned(duck)
 
 onready var gun_pivot := $GunPivot
 onready var camera := $Camera
+onready var _shotgun := $GunPivot/DoubleBarrelShotgun
 
 var _ray_start_position := Vector3()
 var _ray_target_position := Vector3()
 
 
+func _ready() -> void:
+	_shotgun.reload()
+	_shotgun.infinite_ammo = true
+
+
+func game_over() -> void:
+	_shotgun.infinite_ammo = true
+
+
 func game_start() -> void:
 	$DuckSpawner.start_spawner()
+	_shotgun.infinite_ammo = false
 
 
 func _input(event: InputEvent) -> void:
