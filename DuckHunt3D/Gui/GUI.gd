@@ -1,7 +1,6 @@
 extends Control
 
 signal game_start
-signal game_restart
 
 
 func change_score(new_score: int) -> void:
