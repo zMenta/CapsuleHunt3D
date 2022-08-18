@@ -250,6 +250,14 @@ margin_right = 559.0
 margin_bottom = 125.0
 text = "Time's Up! Good try."
 
+[node name="FinalScoreLabel" type="Label" parent="."]
+visible = false
+margin_left = 417.0
+margin_top = 146.0
+margin_right = 558.0
+margin_bottom = 160.0
+text = "Final Score: "
+
 [node name="Menus" type="Control" parent="."]
 margin_right = 40.0
 margin_bottom = 40.0

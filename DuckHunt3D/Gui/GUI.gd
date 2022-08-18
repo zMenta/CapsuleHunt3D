@@ -22,12 +22,17 @@ func time_made_animation() -> void:
 	$TimeAnimationPlayer.play("TimeMadeAnimation")
 
 
-func switch_visibility_time_up_label() -> void:
+func switch_visibility_game_over_labels() -> void:
 	$TimesUpLabel.visible = not $TimesUpLabel.visible
+	$FinalScoreLabel.visible = not $FinalScoreLabel.visible
 
 
 func change_time_label(new_value: float) -> void:
 	$"%TimeLabel".text = str(new_value)
+
+
+func change_final_score_label(new_value: String) -> void:
+	$FinalScoreLabel.text = new_value
 
 
 func show_menu():
@@ -38,8 +43,9 @@ func _on_Start_pressed():
 	emit_signal("game_start")
 	$Menus.visible = false
 	$TimesUpLabel.visible = false
+	$FinalScoreLabel.visible = false
 	$"%Start".text = "Play Again"
 
 
 func _on_Quit_pressed():
-	OS.quit()
+	get_tree().quit()

@@ -27,12 +27,14 @@ func _on_Duck_died(duck_body: KinematicBody) -> void:
 
 
 func _on_GameTimer_timeout() -> void:
-	$GUI.switch_visibility_time_up_label()
+	$GUI.switch_visibility_game_over_labels()
 	$GUI.show_menu()
 	$GUI.change_score(0)
+	$GUI.change_final_score_label("Final Score:" + str(current_score))
 	$Level.game_over()
 
 
 func _on_Game_Start() -> void:
 	$Level.game_start()
 	$GameTimer.start()
+	current_score = 0
