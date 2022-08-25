@@ -36,5 +36,5 @@ func _on_GameTimer_timeout() -> void:
 
 func _on_Game_Start() -> void:
 	$Level.game_start()
-	$GameTimer.start(15)
+	$GameTimer.start($GameTimer.wait_time)
 	current_score = 0
