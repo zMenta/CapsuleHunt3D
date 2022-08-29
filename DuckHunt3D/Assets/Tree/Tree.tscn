@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=2]
+
+[sub_resource type="SpatialMaterial" id=1]
+albedo_color = Color( 0.415686, 0.266667, 0.0745098, 1 )
+
+[sub_resource type="SpatialMaterial" id=2]
+albedo_color = Color( 0.117647, 0.470588, 0.0627451, 1 )
+
+[node name="Tree" type="Spatial"]
+
+[node name="trunk" type="CSGCylinder" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.13291, 0 )
+radius = 0.445387
+height = 4.68277
+material = SubResource( 1 )
+
+[node name="leafes" type="CSGSphere" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.789066, 5.62377, 0 )
+radius = 2.27297
+material = SubResource( 2 )
+
+[node name="leafes2" type="CSGSphere" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.705387, 5.96993, 0 )
+radius = 2.71292
+material = SubResource( 2 )
+
+[node name="leafes3" type="CSGSphere" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.14258, 7.61689, 0.0523365 )
+radius = 1.41106
+material = SubResource( 2 )
