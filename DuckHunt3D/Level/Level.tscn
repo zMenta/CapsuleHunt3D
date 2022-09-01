@@ -126,7 +126,7 @@ transform = Transform( 0.941964, 0, 0.335715, 0, 1, 0, -0.335715, 0, 0.941964, -
 transform = Transform( 0.196031, 0, -0.0396444, 0, 0.2, 0, 0.0396444, 0, 0.196031, 1.07503, -1.03867, -3.24298 )
 
 [node name="Grass23" parent="Blocks/Grass" instance=ExtResource( 6 )]
-transform = Transform( 0.196031, 0, -0.0396444, 0, 0.2, 0, 0.0396444, 0, 0.196031, 7.07503, -1.03867, -3.24298 )
+transform = Transform( 0.196031, 0, -0.0396444, 0, 0.2, 0, 0.0396444, 0, 0.196031, 7.07503, -1.03867, -5.51116 )
 
 [node name="Grass24" parent="Blocks/Grass" instance=ExtResource( 6 )]
 transform = Transform( 0.196031, 0, -0.0396444, 0, 0.2, 0, 0.0396444, 0, 0.196031, 10.075, -1.03867, -3.24298 )
