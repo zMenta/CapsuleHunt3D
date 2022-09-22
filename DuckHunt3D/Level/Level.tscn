@@ -30,7 +30,7 @@ script = ExtResource( 2 )
 [node name="Blocks" type="Spatial" parent="."]
 
 [node name="CSGBox" type="CSGBox" parent="Blocks"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.67218, -17.3095 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.669142, -3.62285, -16.6931 )
 use_collision = true
 width = 176.136
 depth = 53.998
@@ -121,6 +121,7 @@ transform = Transform( 0.783108, 0, 0.621886, 0, 1, 0, -0.621886, 0, 0.783108, -
 transform = Transform( 0.941964, 0, 0.335715, 0, 1, 0, -0.335715, 0, 0.941964, -15.0354, -2.30127, -25.9318 )
 
 [node name="Grass" type="Spatial" parent="Blocks"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.889524, 0 )
 
 [node name="Grass" parent="Blocks/Grass" instance=ExtResource( 6 )]
 transform = Transform( 0.196031, 0, -0.0396444, 0, 0.2, 0, 0.0396444, 0, 0.196031, 1.07503, -1.03867, -3.24298 )
@@ -189,10 +190,10 @@ transform = Transform( 0.196031, 0, -0.0396444, 0, 0.2, 0, 0.0396444, 0, 0.19603
 transform = Transform( 0.196031, 0, -0.0396444, 0, 0.2, 0, 0.0396444, 0, 0.196031, -2.14371, -1.03867, 2.2573 )
 
 [node name="Grass65" parent="Blocks/Grass" instance=ExtResource( 6 )]
-transform = Transform( 0.196031, 0, -0.0396444, 0, 0.2, 0, 0.0396444, 0, 0.196031, 4.85629, -1.03867, 2.2573 )
+transform = Transform( 0.196031, 0, -0.0396444, 0, 0.2, 0, 0.0396444, 0, 0.196031, 4.85629, -1.03867, 2.71913 )
 
 [node name="Grass66" parent="Blocks/Grass" instance=ExtResource( 6 )]
-transform = Transform( 0.196031, 0, -0.0396444, 0, 0.2, 0, 0.0396444, 0, 0.196031, 4.85629, -1.03867, -2.86008 )
+transform = Transform( 0.196031, 0, -0.0396444, 0, 0.2, 0, 0.0396444, 0, 0.196031, 6.16655, -1.03867, -1.79399 )
 
 [node name="Grass67" parent="Blocks/Grass" instance=ExtResource( 6 )]
 transform = Transform( 0.196031, 0, -0.0396444, 0, 0.2, 0, 0.0396444, 0, 0.196031, 9.85629, -1.03867, -2.86008 )
@@ -381,7 +382,7 @@ transform = Transform( 0.196031, 0, -0.0396444, 0, 0.2, 0, 0.0396444, 0, 0.19603
 transform = Transform( 0.196031, 0, -0.0396444, 0, 0.2, 0, 0.0396444, 0, 0.196031, -12.4265, 0.995976, -7.05958 )
 
 [node name="Grass148" parent="Blocks/Grass" instance=ExtResource( 6 )]
-transform = Transform( 0.196031, 0, -0.0396444, 0, 0.2, 0, 0.0396444, 0, 0.196031, 3.68779, 0.995976, -7.05958 )
+transform = Transform( 0.196031, 0, -0.0396444, 0, 0.2, 0, 0.0396444, 0, 0.196031, 3.68779, -0.430595, -7.05958 )
 
 [node name="Grass149" parent="Blocks/Grass" instance=ExtResource( 6 )]
 transform = Transform( 0.196031, 0, -0.0396444, 0, 0.2, 0, 0.0396444, 0, 0.196031, 15.6229, 0.995976, -7.05958 )
