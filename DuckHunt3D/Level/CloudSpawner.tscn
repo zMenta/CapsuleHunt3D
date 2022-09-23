@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Level/CloudSpawner.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Cloud/Cloud.tscn" type="PackedScene" id=2]
+
+[sub_resource type="Curve3D" id=1]
+_data = {
+"points": PoolVector3Array( 0, 0, 0, 0, 0, 0, -0.0198455, -3.34746, 2.35438e-06, 0, 0, 0, 0, 0, 0, -0.0748725, 53.2057, 2.35438e-06, 0, 0, 0, 0, 0, 0, -0.0198455, -3.45751, 2.35438e-06 ),
+"tilts": PoolRealArray( 0, 0, 0 )
+}
+
+[node name="CloudSpawner" type="Spatial"]
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+Cloud = ExtResource( 2 )
+
+[node name="Path" type="Path" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.00202706 )
+curve = SubResource( 1 )
+
+[node name="PathFollow" type="PathFollow" parent="Path"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0198455, -3.34746, 2.35438e-06 )
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 4.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
