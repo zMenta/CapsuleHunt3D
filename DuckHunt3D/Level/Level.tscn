@@ -1084,6 +1084,6 @@ transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.153725, 0, 17.2769 )
 
 [node name="CloudSpawner" parent="." instance=ExtResource( 8 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -92.1767, 25.5422, -61.767 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -106.82, 25.5422, -61.767 )
 
 [connection signal="duck_spawned" from="DuckSpawner" to="." method="_on_DuckSpawner_duck_spawned"]
