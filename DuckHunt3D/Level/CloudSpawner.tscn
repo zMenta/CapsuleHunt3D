@@ -24,7 +24,7 @@ curve = SubResource( 1 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0198455, -3.34746, 2.35438e-06 )
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 30.0
+wait_time = 25.0
 autostart = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

@@ -1065,6 +1065,7 @@ transform = Transform( 0.196031, 0, -0.0396444, 0, 0.2, 0, 0.0396444, 0, 0.19603
 transform = Transform( 0.196031, 0, -0.0396444, 0, 0.2, 0, 0.0396444, 0, 0.196031, 10.089, -1.03867, 0.549206 )
 
 [node name="Cloud" parent="Blocks" instance=ExtResource( 7 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, -1.9929, 26.6731, -60.9471 )
 
 [node name="Camera" type="Camera" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.92419, 9.42473 )
