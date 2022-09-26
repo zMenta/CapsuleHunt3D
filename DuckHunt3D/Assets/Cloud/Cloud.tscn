@@ -9,6 +9,7 @@ texture = ExtResource( 1 )
 script = ExtResource( 2 )
 
 [node name="VisibilityNotifier" type="VisibilityNotifier" parent="."]
-aabb = AABB( -0.382772, -0.404651, -0.169652, 0.765545, 0.809303, 0.339304 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.181296, 0, 0 )
+aabb = AABB( -12.4752, -0.404651, -2.37488, 24.9505, 0.809303, 4.74976 )
 
 [connection signal="camera_exited" from="VisibilityNotifier" to="." method="_on_VisibilityNotifier_camera_exited"]
