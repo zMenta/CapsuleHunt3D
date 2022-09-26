@@ -13,7 +13,8 @@ func _input(event: InputEvent) -> void:
 		$TimeMade.rect_position = get_global_mouse_position() + Vector2(-50, 25)
 
 
-func point_made_animation() -> void:
+func point_made_animation(point_amount: int = 100) -> void:
+	$PointMade.text = str(point_amount)
 	$PointAnimationPlayer.play("PointMadeAnimation")
 
 

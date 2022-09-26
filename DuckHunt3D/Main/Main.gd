@@ -18,12 +18,16 @@ func _on_Level_duck_spawned(duck: KinematicBody) -> void:
 
 func _on_Duck_died(duck_body: KinematicBody) -> void:
 	if not $GameTimer.is_stopped():
-		$GUI.point_made_animation()
-		$GUI.change_score(current_score)
-		current_score += 100
+		var score_to_make := 100
 		if duck_body.is_in_group("time_duck"):
+			score_to_make = 100
 			$GameTimer.start($GameTimer.time_left + 4.0)
 			$GUI.time_made_animation()
+		else:
+			score_to_make = 175
+		current_score += score_to_make
+		$GUI.point_made_animation(score_to_make)
+		$GUI.change_score(current_score)
 
 
 func _on_GameTimer_timeout() -> void:
