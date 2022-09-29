@@ -28,7 +28,7 @@ func switch_visibility_game_over_labels() -> void:
 
 
 func change_time_label(new_value: float) -> void:
-	$"%TimeLabel".text = str(new_value)
+	$"%TimeLabel".text = "%.2f" % new_value
 
 
 func change_final_score_label(new_value: String) -> void:
