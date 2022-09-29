@@ -14,7 +14,7 @@ func _input(event: InputEvent) -> void:
 
 
 func point_made_animation(point_amount: int = 100) -> void:
-	$PointMade.text = str(point_amount)
+	$PointMade.text = "+" + str(point_amount)
 	$PointAnimationPlayer.play("PointMadeAnimation")
 
 

@@ -22,6 +22,10 @@ gdscript/warnings/return_value_discarded=false
 
 debug=false
 
+[gui]
+
+theme/custom_font="res://Font/Font.tres"
+
 [input]
 
 fire={
