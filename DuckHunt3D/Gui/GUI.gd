@@ -3,10 +3,6 @@ extends Control
 signal game_start
 
 
-func change_score(new_score: int) -> void:
-	$"%ScoreLabel".text = "Score: %s" % new_score
-
-
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion:
 		$PointMade.rect_position = get_global_mouse_position()
@@ -28,7 +24,13 @@ func switch_visibility_game_over_labels() -> void:
 
 
 func change_time_label(new_value: float) -> void:
-	$"%TimeLabel".text = "%.2f" % new_value
+	var time_label := $"%TimeLabel"
+	time_label.text = "%.2f" % new_value
+	
+	if float(time_label.text) <= 5:
+		time_label.add_color_override("font_color", Color(20,0,0))
+	else:
+		time_label.add_color_override("font_color", Color(1,1,1))
 
 
 func change_final_score_label(new_value: String) -> void:
