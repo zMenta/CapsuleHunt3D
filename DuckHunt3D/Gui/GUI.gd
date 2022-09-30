@@ -3,6 +3,10 @@ extends Control
 signal game_start
 
 
+func change_score(new_score: int) -> void:
+	$"%ScoreLabel".text = "Score: %s" % new_score
+
+
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion:
 		$PointMade.rect_position = get_global_mouse_position()
