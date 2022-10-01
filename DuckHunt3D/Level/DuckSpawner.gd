@@ -4,7 +4,7 @@ signal duck_spawned(duck)
 
 export(PackedScene) var Duck
 export(PackedScene) var TimeDuck
-export var duck_counter_threshold := 5
+export var duck_counter_threshold := 4
 
 var _duck_counter := 0
 
