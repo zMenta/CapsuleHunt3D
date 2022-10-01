@@ -11,8 +11,12 @@ config_version=4
 [application]
 
 config/name="CapsuleHunt3D"
+config/description="Shoot down the capsules!"
 run/main_scene="res://Main/Main.tscn"
+boot_splash/image="res://Assets/30-Capsule Hunt 0001.png"
 config/icon="res://Assets/30-Capsule Hunt 0001.png"
+config/macos_native_icon="res://Assets/30-Capsule Hunt 0001.png"
+config/windows_native_icon="res://Assets/30-Capsule Hunt 0001.png"
 
 [debug]
 
