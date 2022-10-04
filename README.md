@@ -14,6 +14,12 @@ Shoot as many capsules as you can before the time runs out!
 - M1 (Left mouse button): Shoot with the shotgun;
 - R : Manual reload.
 
+## Download
+
+Available for windows and linux.
+
+itch.io page: https://zmenta.itch.io/capsulehunt
+
 ## Screenshots:
 
 ![1.png](readme/1.png)
