@@ -1,6 +1,6 @@
 # CapsuleHunt3D
 
-![30-Capsule Hunt 0001.png](CapsuleHunt3D_ReadmeFiles/30-Capsule_Hunt_0001.png)
+![30-Capsule Hunt 0001.png](readme/30-Capsule_Hunt_0001.png)
 
 ## About
 
@@ -16,8 +16,8 @@ Shoot as many capsules as you can before the time runs out!
 
 ## Screenshots:
 
-![1.png](CapsuleHunt3D_ReadmeFiles/1.png)
+![1.png](readme/1.png)
 
-![2.png](CapsuleHunt3D_ReadmeFiles/2.png)
+![2.png](readme/2.png)
 
-![3.png](CapsuleHunt3D_ReadmeFiles/3.png)
+![3.png](readme/3.png)
