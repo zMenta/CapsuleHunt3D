@@ -1,7 +1,7 @@
 extends Node
 
-var current_score := 0
 export var game_start_time := 30
+var current_score := 0
 
 
 func _ready() -> void:
